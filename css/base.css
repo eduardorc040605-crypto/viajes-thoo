@@ -1,0 +1,93 @@
+/* =========================================================
+   Base: colores, tipografía, botones, formularios, cabecera,
+   redes, pie de página y botón flotante de WhatsApp.
+   (Colores tomados del logo de Los Viajes de Thoo)
+   ========================================================= */
+
+:root {
+  --tinta: #0F2A3D;
+  --marino: #0B3A5E;
+  --cielo: #1E9AE6;
+  --sol: #F7A823;
+  --rojo: #E4202B;
+  --niebla: #F1F7FB;
+  --blanco: #fff;
+  --linea: #CFE0EC;
+  --verde-whatsapp: #1FA855;
+}
+
+/* ---------- Reinicio ---------- */
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+body { font: 400 1rem/1.65 Figtree, system-ui, sans-serif; color: var(--tinta); background: var(--niebla); }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+button, input, select { font: inherit; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 3px solid var(--sol); outline-offset: 3px; }
+
+/* ---------- Tipografía ---------- */
+h1, h2, h3 { font-family: Fraunces, Georgia, serif; font-weight: 300; line-height: 1.12; letter-spacing: -.01em; }
+h2 { font-size: clamp(1.9rem, 5vw, 2.8rem); }
+h3 { font-size: 1.35rem; font-weight: 500; }
+.etiqueta { font-weight: 700; color: var(--sol); margin-bottom: .6rem; }
+
+/* ---------- Utilidades de distribución ---------- */
+.contenedor { width: min(1120px, 100% - 2rem); margin-inline: auto; }
+.dos-columnas { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 880px) { .dos-columnas { grid-template-columns: 1fr 1fr; } }
+
+/* ---------- Botones ---------- */
+.boton {
+  display: inline-block; padding: .6rem 1.2rem; cursor: pointer;
+  border: 2px solid currentColor; border-radius: 999px; background: transparent;
+  color: var(--tinta); font-weight: 700; font-size: .95rem; text-decoration: none;
+}
+.boton:hover { background: var(--tinta); border-color: var(--tinta); color: var(--blanco); }
+.boton.sol { background: var(--sol); border-color: var(--sol); color: var(--marino); }
+.boton.sol:hover { background: var(--blanco); border-color: var(--blanco); }
+.boton.rojo { background: var(--rojo); border-color: var(--rojo); color: var(--blanco); }
+.boton.rojo:hover { background: var(--tinta); border-color: var(--tinta); }
+.boton.grande { padding: .85rem 1.7rem; font-size: 1.05rem; }
+
+/* ---------- Formularios ---------- */
+label { display: block; font-weight: 700; margin-bottom: .35rem; }
+select, input {
+  width: 100%; padding: .65rem .9rem; border: 2px solid var(--tinta);
+  border-radius: 10px; background: var(--blanco); color: var(--tinta);
+}
+
+/* ---------- Cabecera ---------- */
+.cabecera { position: sticky; top: 0; z-index: 20; background: var(--blanco); border-bottom: 1px solid var(--linea); }
+.barra { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: .5rem; }
+.marca { line-height: 0; }
+.marca img { height: 3.4rem; width: auto; }
+.menu { display: none; gap: 1.5rem; font-weight: 600; }
+.menu a { text-decoration: none; border-bottom: 2px solid transparent; }
+.menu a:hover { border-color: var(--rojo); }
+.redes--cabecera { display: none; }
+@media (min-width: 960px) { .menu { display: flex; } .redes--cabecera { display: flex; } }
+
+/* ---------- Redes sociales ---------- */
+.redes { display: flex; gap: .6rem; }
+.redes a { display: grid; place-items: center; width: 2.5rem; height: 2.5rem; border: 2px solid currentColor; border-radius: 50%; }
+.redes a:hover { background: var(--sol); border-color: var(--sol); color: var(--marino); }
+.redes svg { width: 1.2rem; height: 1.2rem; }
+
+/* ---------- Pie de página ---------- */
+.pie { display: grid; gap: 1rem; padding-block: 2.5rem; background: var(--marino); color: var(--niebla); }
+.pie .contenedor { display: grid; gap: 1rem; justify-items: start; }
+.pie__logo { width: 150px; height: auto; padding: .5rem .8rem; background: var(--blanco); border-radius: 14px; }
+.pie__enlaces a { margin-right: 1.2rem; color: var(--sol); }
+.pie__nota { font-size: .85rem; opacity: .7; }
+
+/* ---------- Botón flotante de WhatsApp ---------- */
+.whatsapp { position: fixed; right: 1rem; bottom: 1rem; z-index: 30; display: flex; flex-direction: column; align-items: flex-end; gap: .6rem; }
+#whatsapp-boton {
+  display: flex; align-items: center; gap: .5rem; padding: .8rem 1.2rem; cursor: pointer;
+  border: 0; border-radius: 999px; background: var(--verde-whatsapp); color: var(--blanco);
+  font-weight: 700; box-shadow: 0 6px 20px rgba(0, 0, 0, .25);
+}
+#whatsapp-menu { list-style: none; padding: .5rem; display: grid; gap: .2rem; background: var(--blanco); border-radius: 18px; box-shadow: 0 8px 28px rgba(0, 0, 0, .25); }
+#whatsapp-menu a { display: block; padding: .6rem 1rem; border-radius: 10px; text-decoration: none; font-weight: 600; }
+#whatsapp-menu a:hover { background: var(--niebla); }

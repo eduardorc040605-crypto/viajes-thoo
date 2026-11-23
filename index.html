@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Los Viajes de Thoo | Viajes grupales desde CDMX</title>
+  <meta name="description" content="Agencia de viajes en CDMX. Tours de un día, circuitos con vuelo y escapadas de playa en salidas grupales. Cotiza por WhatsApp.">
+  <meta name="theme-color" content="#0B3A5E">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Los Viajes de Thoo | Viajes grupales desde CDMX">
+  <meta property="og:description" content="Tours de un día, circuitos con vuelo y escapadas de playa. Viaja, disfruta y déjanos ayudar a hacerlo realidad.">
+  <meta property="og:image" content="assets/logo.png">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/secciones.css">
+
+  <!-- Datos para buscadores (Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Los Viajes de Thoo",
+    "description": "Viajes grupales desde CDMX: hoteles, tours y experiencias únicas.",
+    "telephone": "+52 56 4735 5854",
+    "areaServed": "México",
+    "sameAs": [
+      "https://www.instagram.com/losviajesdethoo/",
+      "https://www.tiktok.com/@losviajesdethoo_",
+      "https://www.facebook.com/profile.php?id=61581704138993"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ============ Cabecera ============ -->
+  <header class="cabecera">
+    <div class="contenedor barra">
+      <a class="marca" href="#inicio" aria-label="Los Viajes de Thoo, ir al inicio">
+        <img src="assets/logo.png" alt="Los Viajes de Thoo" width="140" height="78">
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <a href="#tours">Próximas salidas</a>
+        <a href="#por-que">Por qué Thoo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="redes redes--cabecera"></div>
+      <a class="boton rojo" data-wa="Hola, quiero información de sus viajes grupales desde CDMX." target="_blank" rel="noopener">Cotizar</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ Portada ============ -->
+    <section class="portada" id="inicio">
+      <div class="contenedor dos-columnas">
+        <div>
+          <p class="etiqueta" data-negocio="lema"></p>
+          <h1>Con Los Viajes de Thoo todo está planeado</h1>
+          <p class="intro">Tours de un día, circuitos con vuelo y escapadas de playa. Elige tu salida y un asesor te atiende por WhatsApp.</p>
+          <a class="boton sol grande" href="#tours">Ver próximas salidas</a>
+        </div>
+        <article class="proxima" id="proxima" aria-live="polite"></article>
+      </div>
+    </section>
+
+    <!-- ============ Próximas salidas ============ -->
+    <section class="bloque" id="tours">
+      <div class="contenedor">
+        <h2>Próximas salidas</h2>
+        <p class="subtitulo">Filtra por mes, región o tipo de viaje.</p>
+
+        <div class="filtros">
+          <div><label for="filtro-mes">Mes</label><select id="filtro-mes"></select></div>
+          <div><label for="filtro-region">Región</label><select id="filtro-region"></select></div>
+          <div><label for="filtro-tipo">Tipo de viaje</label><select id="filtro-tipo"></select></div>
+        </div>
+        <p class="resumen" id="resumen" role="status"></p>
+
+        <div class="rejilla" id="lista-tours"></div>
+      </div>
+    </section>
+
+    <!-- ============ Por qué viajar con nosotros ============ -->
+    <section class="bloque claro" id="por-que">
+      <div class="contenedor">
+        <h2>Por qué viajar con Thoo</h2>
+        <div class="ventajas">
+          <div><h3>Coordinador en cada salida</h3><p>Un guía de grupo te acompaña de principio a fin.</p></div>
+          <div><h3>Todo claro desde el inicio</h3><p>Cada viaje muestra qué incluye, qué visitas hace y cuánto cuesta por persona.</p></div>
+          <div><h3>Salidas garantizadas</h3><p>En hoteles de playa seleccionados, la salida está garantizada.</p></div>
+          <div><h3>Precios de pre-compra</h3><p>Aparta con tiempo y paga menos en salidas seleccionadas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contacto ============ -->
+    <section class="bloque oscuro" id="contacto">
+      <div class="contenedor dos-columnas">
+        <div>
+          <h2>¿Tienes otro destino en mente?</h2>
+          <p class="subtitulo">También armamos viajes nacionales e internacionales, salidas en grupo y paquetes vacacionales. Cuéntanos y te ayudamos.</p>
+          <p class="telefono">WhatsApp y teléfono: <strong data-negocio="telefono"></strong></p>
+          <div class="redes"></div>
+        </div>
+
+        <form class="formulario" id="form-contacto" novalidate>
+          <h3>Escríbenos por WhatsApp</h3>
+          <div><label for="form-nombre">Nombre</label><input id="form-nombre" autocomplete="name" required></div>
+          <div><label for="form-tour">Viaje de interés</label><select id="form-tour"></select></div>
+          <div><label for="form-personas">Número de viajeros</label><input id="form-personas" type="number" min="1" value="2"></div>
+          <button class="boton sol" type="submit">Enviar mensaje</button>
+          <p class="mensaje-form" id="form-mensaje" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Pie de página ============ -->
+  <footer class="pie">
+    <div class="contenedor">
+      <img class="pie__logo" src="assets/logo.png" alt="Los Viajes de Thoo" width="150" height="84">
+      <p data-negocio="frase"></p>
+      <div class="redes"></div>
+      <p class="pie__enlaces"><a href="#">Aviso de privacidad</a> <a href="#">Términos y condiciones</a></p>
+      <p class="pie__nota">&copy; <span id="anio"></span> <span data-negocio="nombre"></span></p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp con mensajes rápidos -->
+  <div class="whatsapp">
+    <ul id="whatsapp-menu" hidden></ul>
+    <button id="whatsapp-boton" aria-expanded="false" aria-controls="whatsapp-menu">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2C6.5 2 2 6.2 2 11.5c0 2 .7 3.9 1.9 5.4L3 22l5.4-1.7c1.1.4 2.3.6 3.6.6 5.5 0 10-4.2 10-9.4S17.500 2 12 2z"/></svg>
+      <span>Escríbenos</span>
+    </button>
+  </div>
+
+  <!-- Ventana con el detalle de cada viaje -->
+  <dialog id="detalle" aria-label="Detalle del viaje"></dialog>
+
+  <script src="js/config.js"></script>
+  <script src="js/tours.js"></script>
+  <script src="js/utilidades.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
